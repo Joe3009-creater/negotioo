@@ -1,0 +1,138 @@
+{
+  "project_name": "Negotio",
+  "theme": "dark",
+  "design_philosophy": "A premium, human-designed, strategic negotiation AI product. Avoids all generic AI clichés (no purple, no blobs, no neon, no chatgpt aesthetics). Feels like a high-end productivity and executive training platform. Utilizes an editorial layout, deep contrast, and a single distinctive accent color to communicate precision, intelligence, and controlled tension.",
+  "typography": {
+    "headings": {
+      "family": "Playfair Display",
+      "weights": ["400", "600"],
+      "usage": "Used for main marketing headings, large editorial numbers in dashboards, and scenario titles. Conveys a premium, human, and authoritative tone."
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["300", "400", "500", "600"],
+      "usage": "Used for all UI elements, chat messages, data tables, and general body copy. Clean, highly legible, modern."
+    },
+    "rules": [
+      "H1 must use tracking-tight and leading-none.",
+      "Use Playfair Display for all large data numbers (e.g., score '85', deal health '92%').",
+      "Labels/Overlines must be uppercase, tracking-[0.2em], text-xs, using Manrope."
+    ]
+  },
+  "colors": {
+    "background": {
+      "base": "#0D0E11",
+      "surface": "#16181D",
+      "surface_elevated": "#1E2128"
+    },
+    "text": {
+      "primary": "#F7F5F0",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "accent": {
+      "primary": "#C84B31",
+      "hover": "#A83F28",
+      "muted": "rgba(200, 75, 49, 0.15)",
+      "description": "Terracotta/Rust. Represents momentum, tension, and primary actions. It is earthy yet urgent, completely avoiding generic AI blue/purple."
+    },
+    "status": {
+      "success": "#3F6250",
+      "warning": "#C29343",
+      "danger": "#C84B31"
+    }
+  },
+  "visual_enhancers": {
+    "textures": [
+      "Subtle grain/noise overlay on the background (opacity 2-3%).",
+      "Barely visible grid pattern in the hero section and dashboard background (1px lines, 5% opacity white)."
+    ],
+    "lighting": [
+      "Subtle radial lighting (soft white or very faint terracotta) to draw focus, NEVER bright neon."
+    ],
+    "borders": [
+      "1px solid #272A30 for structural definition.",
+      "Cards do not have heavy shadows; they rely on 1px borders and slight background lightness differences."
+    ],
+    "radii": [
+      "Very minimal border radii. Use `rounded-sm` (4px) or `rounded-none` for a sharp, precise, confident, enterprise look."
+    ],
+    "glassmorphism": [
+      "Used selectively ONLY for the floating navigation and sticky action bars. Must use backdrop-blur-xl with a 1px border-white/10 and bg-black/60."
+    ]
+  },
+  "layouts": {
+    "marketing_page": "Scroll-based storytelling. High-contrast typography. Use the bento grid for feature highlights. Generous whitespace (py-24 to py-32).",
+    "dashboard": "Bento Grid protocol. High density but perfectly aligned. Use cardless sections where possible, relying on 1px borders (border-collapse style) to separate metrics.",
+    "negotiation_room": "Split screen layout. Left/Right sidebars (Opponent profile, Stance, Momentum, Pressure Meter) and a central wide column for the chat scenario. Feels like a command center, not a messaging app.",
+    "spacing": "Tailwind scale. Use padding generously (p-8, p-12) in empty states, tight gaps (gap-4) in data dense panels."
+  },
+  "components": {
+    "navigation": "Floating SaaS nav. Centered pill shape, backdrop-blur, containing logo, minimal links, and a sharp Terracotta CTA button.",
+    "buttons": "Sharp edges (`rounded-sm`). Primary button: bg-[#C84B31] text-white hover:bg-[#A83F28]. Secondary: bg-transparent border border-[#272A30] hover:bg-[#1E2128].",
+    "scenario_cards": "Hover-reactive. Monochromatic default state. On hover: a 1px Terracotta line expands, and the card elevates slightly (-translate-y-1). Shows difficulty, role, and duration as minimal tags.",
+    "chat_interface": "No traditional 'bubbles'. Editorial layout where AI opponent text is left-aligned with a subtle vertical line, and user text is indented. Elegant typing indicator (fade-in text, not jumping dots).",
+    "meters_and_charts": "Pressure meter: A clean horizontal or semi-circle line gauge using Recharts or simple div widths. Minimalist axes. Concession tracker: Step-based timeline component.",
+    "inputs": "Premium input field: 1px border-[#272A30], bg-[#0D0E11], focus:border-[#C84B31] focus:ring-1 focus:ring-[#C84B31]."
+  },
+  "motion": {
+    "transitions": "Use `transition-all duration-300 ease-out` for hovers. No bouncy animations.",
+    "entrances": "Staggered fade-up for dashboard widgets and chat messages (`framer-motion` with `y: 10, opacity: 0` to `y: 0, opacity: 1`).",
+    "micro_interactions": "Cursor/light details used tastefully (e.g., a subtle highlight following the cursor on scenario cards)."
+  },
+  "image_urls": {
+    "hero_background_texture": {
+      "url": "https://images.unsplash.com/photo-1760105900167-20b30178c9bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHw0fHxzdWJ0bGUlMjBub2lzZSUyMHRleHR1cmUlMjBhYnN0cmFjdHxlbnwwfHx8fDE3ODY1NTUyNzF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark abstract background with subtle warm light. Use as a very low opacity background layer."
+    },
+    "opponent_avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3ODY1NTUyNzF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Executive portrait, use for AI opponent 'The CEO'."
+      },
+      {
+        "url": "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Executive portrait, use for AI opponent 'The Procurement Officer'."
+      }
+    ],
+    "scenario_covers": [
+      {
+        "url": "https://images.unsplash.com/photo-1665779736808-047a6bbf43a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlJTIwbGluZXN8ZW58MHx8fHwxNzg2NTU1MjcxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist architecture, use for Enterprise Contract scenario."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlJTIwbGluZXN8ZW58MHx8fHwxNzg2NTU1MjcxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract structural lines, use for Salary Negotiation scenario."
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure all text meets APCA/WCAG AA standards against the deep charcoal background.",
+    "focus": "Focus states must use the Terracotta accent color for high visibility.",
+    "motion": "Respect prefers-reduced-motion."
+  },
+  "instructions_to_main_agent": {
+    "setup": "Install Playfair Display and Manrope from Google Fonts. Install framer-motion, recharts, and lucide-react.",
+    "execution_order": "1. Layout wrapper with noise texture. 2. Landing page. 3. Dashboard layout. 4. Scenario Selection. 5. Negotiation Chat Room (most complex). 6. Coaching Report.",
+    "rules": [
+      "DO NOT use generic AI emojis or gradients.",
+      "DO NOT use Inter or standard sans-serif for headings.",
+      "Build the Negotiation Room as a professional command center, not a consumer chat app.",
+      "Use data-testid on all interactive elements.",
+      "Adhere strictly to the color palette and minimal border radii."
+    ]
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy and 1px borders instead of heavy drop shadows.",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use Phosphor or Lucide icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use sonner for toasts."
+  ]
+}
